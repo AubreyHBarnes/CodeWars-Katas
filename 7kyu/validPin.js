@@ -1,21 +1,5 @@
-const pin = 1.234;
+const pin = '123123';
 
-function validatePIN (pin) {
-    //return true or false
-    // const regex = /[0-9]/;
+const regex = /^[0-9]{4}$|^[0-9]{6}$/;
 
-    
-
-    if (`${pin}`.length === 4 || `${pin}`.length === 6){
-        
-        if (parseInt(pin) > 0 && parseInt(pin) % 1 != 0) {
-            console.log(true)
-        } else {
-            console.log(false)
-        }
-    } else {
-        console.log(false)
-    }
-  }
-
-  validatePIN(pin);
+console.log(regex.test(pin))
